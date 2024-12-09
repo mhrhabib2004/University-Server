@@ -59,3 +59,5 @@ export interface StudentModel extends Model<TStudent> {
 //   Record<string, never>,
 //   StudentMethods
 // >;
+
+// fejfdfdflf
