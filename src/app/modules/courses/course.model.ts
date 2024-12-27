@@ -1,7 +1,16 @@
 import { Schema } from "mongoose";
-import { Tcourse } from "./course.interface";
+import { Tcourse, TpreRequistiteCourses } from "./course.interface";
 
-const preRequistiteCourseSchema = 
+const preRequistiteCourseSchema = new Schema<TpreRequistiteCourses>({
+    courese:{
+        type:Schema.Types.ObjectId,
+    
+    },
+    isDeletad:{
+        type:Boolean,
+        default:false
+    }
+})
 
 
 const courseSchema = new Schema<Tcourse>({
@@ -26,5 +35,5 @@ const courseSchema = new Schema<Tcourse>({
         trim:true,
         required:true
     },
-  preRequistiteCourses
+  preRequistiteCourses: [preRequistiteCourseSchema]
 })
