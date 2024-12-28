@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 import { Tcourse, TpreRequistiteCourses } from "./course.interface";
 
 const preRequistiteCourseSchema = new Schema<TpreRequistiteCourses>({
@@ -37,3 +37,5 @@ const courseSchema = new Schema<Tcourse>({
     },
   preRequistiteCourses: [preRequistiteCourseSchema]
 })
+
+export const course = model<Tcourse>('Course',courseSchema)
