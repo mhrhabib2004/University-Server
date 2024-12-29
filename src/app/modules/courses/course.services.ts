@@ -1,7 +1,8 @@
+import { Tcourse } from './course.interface';
 import { course } from './course.model';
 
-const createCourseIntoDB = async () =>{
-    const result = await course.create();
+const createCourseIntoDB = async (paylode:Tcourse) =>{
+    const result = await course.create(paylode);
     return result
 }
 const getAllCourseFromDB = async () =>{
