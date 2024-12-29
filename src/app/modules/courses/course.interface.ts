@@ -1,7 +1,7 @@
 import { Types } from "mongoose"
 
 export type TpreRequistiteCourses = {
-courese:Types.ObjectId,
+course:Types.ObjectId,
 isDeletad:boolean
 }
 

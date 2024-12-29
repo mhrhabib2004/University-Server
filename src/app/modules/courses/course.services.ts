@@ -8,7 +8,7 @@ const createCourseIntoDB = async (paylode:Tcourse) =>{
     return result
 }
 const getAllCourseFromDB = async (qurey:Record<string,unknown>) =>{
-    const coursQuery = new QueryBuilder(course.find().populate('preRequistiteCourseSchema.courese'),qurey)
+    const coursQuery = new QueryBuilder(course.find().populate('preRequistiteCourses.course'),qurey)
     .search(CourseSerchableFields)
     .filter()
     .sort()

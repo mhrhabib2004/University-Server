@@ -2,8 +2,9 @@ import { model, Schema } from "mongoose";
 import { Tcourse, TpreRequistiteCourses } from "./course.interface";
 
 const preRequistiteCourseSchema = new Schema<TpreRequistiteCourses>({
-    courese:{
+    course:{
         type:Schema.Types.ObjectId,
+        ref: 'Course'
     
     },
     isDeletad:{
