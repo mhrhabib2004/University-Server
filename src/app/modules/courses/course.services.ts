@@ -1,4 +1,5 @@
 import QueryBuilder from '../../builder/QueryBuilder';
+import { CourseSerchableFields } from './course.constant';
 import { Tcourse } from './course.interface';
 import { course } from './course.model';
 
@@ -8,7 +9,7 @@ const createCourseIntoDB = async (paylode:Tcourse) =>{
 }
 const getAllCourseFromDB = async (qurey:Record<string,unknown>) =>{
     const coursQuery = new QueryBuilder(course.find(),qurey)
-    .search()
+    .search(CourseSerchableFields)
     .filter()
     .sort()
     .paginate()
